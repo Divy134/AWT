@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+.container
+{
+    padding: 10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: fit-content;
+    display: flex;
+    box-shadow: 10px 10px 10px rgba(224, 131, 77, 0.5);
+    background-color: rgb(168, 204, 230);
+}
+
+input{
+    border: 2px solid black;
+}

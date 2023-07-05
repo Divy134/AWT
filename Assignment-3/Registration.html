@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social media Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div>
+                <label for="Fname">Full name :</label>
+                <input type="text" name="Fname" id="Fname">
+                <span id="FnameErr" type="text"></span>
+            </div><br>
+            <div>
+                <label for="Username">Username</label>
+                <input type="text" name="Username" id="Username">
+            </div><br>
+            <div>
+                <label for="password">Password :</label>
+                <input type="text" name="password" id="password">
+            </div><br>
+            <div>
+                <label for="cpassword">Confirm Password :</label>
+                <input type="text" name="cpassword" id="cpassword">
+            </div><br>
+            <div>
+                <label for="phoneno">Phone No :</label>
+                <input type="text" name="phoneno" id="phoneno">
+            </div><br>
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" name="email" id="email">
+            </div><br>
+            <div>
+                <label for="Gender">Gender :</label>
+                <input type="radio" name="gender" value="Male" id="Male">
+                <label for="Male">Male</label>
+                <input type="radio" name="gender" value="Female" id="Female">
+                <label for="Female">Female</label>
+            </div><br>
+            <div>
+                <label for="state">State :</label>
+                <select name="state" id="state">
+                    <option value="state1">State1</option>
+                    <option value="state2">State2</option>
+                    <option value="state3">State3</option>
+                    <option value="state4">State4</option>
+                </select>
+            </div><br>
+            <div>
+                <input type="checkbox" name="agreement" id="agreement">
+                <label for="agreement">I agree to the terms and conditions</label>
+            </div>
+            <div>
+                <input type="submit" value="Submit" id="submit">
+            </div>
+        </form>
+    </div>
+    <script src="Registration.js"></script>
+</body>
+</html>     
