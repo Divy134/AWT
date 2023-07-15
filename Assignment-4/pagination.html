@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body,table{
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 15px;
+        }
+    </style>
+    <!-- <script src="pagination.js"></script> -->
+</head>
+<body>
+
+        <table id="data-table">
+            <tr>
+                <th>Name</th>
+                <th>Place</th>
+                <th>Email</th>
+            </tr>
+        </table>
+    
+        <div>
+            <br>
+            <button onclick="previousPage()">Previous</button>
+            <button onclick="nextPage()">Next</button>
+        </div>
+    
+  
+    <script>
+        var data = [
+            ["Divy", "india","divy@gmail.com"],
+            ["Abhi", "canada","abhi@gmail.com"],
+            ["Ankit", "London","ankit@gmail.com"],
+            ["Jaivin","US","jaivin@gmail.com"],
+            ["Dhruv","pakistan","dhruv@gmail.com"],
+            ["Prakash","india","prakash@gmail.com"],
+            ["Nikunj","France","nikunj@gmail.com"],
+            ["Dhruval","india","dhruval@gmail.com"],
+            ["Ram","Australia","ram@gmail.com"],
+            ["Sanyam","india","sanyam@gmail.com"],
+            
+        ];
+
+        var current = 1;
+        var item = 5;
+        var totalPages = Math.ceil(data.length / item);
+
+        function displayData() {
+            var startIndex = (current - 1) * item;
+            var endIndex = startIndex + item;
+            var displayData = data.slice(startIndex, endIndex);
+
+            var table = document.getElementById("data-table");
+            table.innerHTML = "<tr><th>Name</th><th>Place</th><th>Email</th></tr>";
+            
+            for (var i = 0; i < displayData.length; i++) {
+                var row = table.insertRow(-1);
+                var nameCell = row.insertCell(0);
+                var placeCell = row.insertCell(1);
+                var EmailCell = row.insertCell(2);
+                nameCell.innerHTML = displayData[i][0];
+                placeCell.innerHTML = displayData[i][1];
+                EmailCell.innerHTML = displayData[i][2];
+            }
+        }
+
+        function previousPage() {
+            if (current > 1) {
+                current--;
+                displayData();
+            }
+        }
+
+        function nextPage() {
+            if (current < totalPages) {
+                current++;
+                displayData();
+            }
+        }
+
+        displayData();
+    </script>
+</body>
+</html>
